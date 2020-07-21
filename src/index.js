@@ -1,5 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
+// import p, { doublePi, triplePi} from "./math.js";
+import * as P from "./math.js";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+console.log(P);
+
+
+ReactDOM.render(
+  <ul>
+    <li>{P.default}</li>
+    <li>{P.doublePi()}</li>
+    <li>{P.triplePi()}</li>
+  </ul>,
+  document.getElementById("root")
+);
